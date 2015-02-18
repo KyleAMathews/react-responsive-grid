@@ -1,5 +1,4 @@
-React = require 'react'
-
-module.exports = React.createClass
-  render: ->
-    <div>Hello world!</div>
+exports.Container = require './components/Container'
+exports.Grid = require './components/Grid'
+exports.Breakpoint = require './components/Breakpoint'
+exports.Span = require './components/Span'
