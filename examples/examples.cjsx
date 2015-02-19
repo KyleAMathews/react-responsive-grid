@@ -26,30 +26,40 @@ module.exports = React.createClass
 
       <Grid columns=12>
         <Span columns=3>
-          <div style={{height: '6rem', background: 'yellow'}}>Hi</div>
+          <div style={{height: '20rem', background: 'yellow'}}>Hi</div>
         </Span>
         <Span columns=4>
           <Span columns=1>
-            <div style={{height: '3rem', background: 'wheat'}}>
+            <div style={{height: '6rem', background: 'wheat', marginBottom: '1rem'}}>
               I'm a child span with 1 column
             </div>
           </Span>
           <Span columns=3 last>
-            <div style={{height: '3rem', background: 'lightgray'}}>
+            <div style={{height: '6rem', background: 'lightgray'}}>
               I'm a child span with 3 columns
             </div>
           </Span>
           <Span columns=4>
-            <div style={{height: '6rem', background: 'pink'}}>
+            <div style={{height: '6rem', background: 'pink', marginBottom: '1rem'}}>
               I'm a child span with 4 columns
+            </div>
+          </Span>
+          <Span columns=3>
+            <div style={{height: '6rem', background: 'lightgray'}}>
+              I'm a child span with 3 columns
+            </div>
+          </Span>
+          <Span columns=1 last>
+            <div style={{height: '6rem', background: 'wheat'}}>
+              I'm a child span with 1 column
             </div>
           </Span>
         </Span>
         <Span columns=2>
-          <div style={{height: '6rem', color: 'white', background: 'green'}}>Hi</div>
+          <div style={{height: '20rem', color: 'white', background: 'green'}}>Hi</div>
         </Span>
         <Span columns=3 last>
-          <div style={{height: '6rem', color: 'white', background: 'purple'}}>Hi</div>
+          <div style={{height: '20rem', color: 'white', background: 'purple'}}>Hi</div>
         </Span>
       </Grid>
 
