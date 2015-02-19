@@ -48,5 +48,8 @@
   },
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/mocha -w --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter"
+  },
+  "dependencies": {
+    "react-component-width-mixin": "^1.1.7"
   }
 }
