@@ -32,8 +32,14 @@ module.exports = (options) ->
   else
     marginRight = gutterWidth + "%"
 
+  # float
+  if ops.last
+    float = "right"
+  else
+    float = "left"
+
   return {
-    float: 'left'
+    float: float
     marginLeft: marginLeft
     marginRight: marginRight
     width: width

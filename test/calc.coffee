@@ -28,10 +28,17 @@ describe 'grid calculate module', ->
     expect(noAtstyles.marginLeft).to.equal(0)
     expect(styles.width).to.equal(noAtstyles.width)
 
-  it 'should remove marginRight if last', ->
+  it 'should remove marginRight if last prop', ->
     styles = spanCalculate({last: true})
-
     expect(styles.marginRight).to.equal(0)
+
+  it 'should float left by default', ->
+    styles = spanCalculate()
+    expect(styles.float).to.equal("left")
+
+  it 'should float right if last prop', ->
+    styles = spanCalculate({last: true})
+    expect(styles.float).to.equal("right")
 
   it 'should set "clear:both" if break passed in', ->
     styles = spanCalculate({break: true})
