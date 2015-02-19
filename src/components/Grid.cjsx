@@ -26,7 +26,7 @@ module.exports = React.createClass
     )
 
   render: ->
-    <div>
+    <div {...@props}>
       {@renderChildren()}
       <span style={{display: 'block', clear: 'both'}}>{' '}</span>
     </div>

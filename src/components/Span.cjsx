@@ -1,4 +1,5 @@
 React = require 'react'
+objectAssign = require('react/lib/Object.assign')
 
 spanCalculate = require '../utils/SpanCalculate'
 
@@ -40,6 +41,8 @@ module.exports = React.createClass
       last: @props.last
       break: @props.break
     })
+
+    styles = objectAssign defaultStyles, @props.style
 
     <div style={style}>
       {@renderChildren()}
