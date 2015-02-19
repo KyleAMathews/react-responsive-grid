@@ -3,30 +3,30 @@ Power tools for building responsive layouts with React
 
 WIP, porting best ideas from [Susy](http://susy.oddbird.net/) to a react-friendly and css independent format.
 
-## Susy porting progress
-### Container
+### Susy porting progress
+#### Container
 - [x] Basic fluid container
 - [ ] static
 - [ ] non-centered layouts
 
-### Breakpoint
+#### Breakpoint
 - [x] Basic component width breakpoints (note this is different than a
   media query breakpoint)
 - [ ] Media query breakpoints
 
-### Gutter options
+#### Gutter options
 - [x] margin-based
 - [ ] padding-based
 - [ ] explicit gutter width
 
-### Gutter positions
+#### Gutter positions
 - [ ] before
 - [x] after
 - [ ] inside
 - [ ] inside-static
 - [ ] split
 
-### Span
+#### Span
 - [x] Set # of columns
 - [ ] Set arbitrary width
 - [x] Remove last gutter by "last" prop
@@ -54,5 +54,5 @@ WIP, porting best ideas from [Susy](http://susy.oddbird.net/) to a react-friendl
 - [ ] "bleed-y" prop — a shortcut for applying only top and bottom
   (vertical) bleed
 
-### Debuggin
+#### Debuggin
 - [ ] Show grid
