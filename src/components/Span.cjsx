@@ -42,7 +42,7 @@ module.exports = React.createClass
       break: @props.break
     })
 
-    styles = objectAssign defaultStyles, @props.style
+    style = objectAssign style, @props.style
 
     <div style={style}>
       {@renderChildren()}
