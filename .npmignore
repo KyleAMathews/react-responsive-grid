@@ -28,4 +28,3 @@ node_modules
 .lock-wscript
 susy-test/
 examples/bundle.js
-dist/
