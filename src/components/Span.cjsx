@@ -10,11 +10,17 @@ module.exports = React.createClass
     context: React.PropTypes.object.isRequired
     columns: React.PropTypes.number
     at: React.PropTypes.number
+    pre: React.PropTypes.number
+    post: React.PropTypes.number
+    squish: React.PropTypes.number
     last: React.PropTypes.bool
     break: React.PropTypes.bool
 
   getDefaultProps: ->
     at: 0
+    pre: 0
+    post: 0
+    squish: 0
     last: false
     first: false
     break: false
@@ -38,6 +44,9 @@ module.exports = React.createClass
       gutterRatio: @props.context.gutterRatio
       columns: @props.columns
       at: @props.at
+      pre: @props.pre
+      post: @props.post
+      squish: @props.squish
       last: @props.last
       break: @props.break
     })

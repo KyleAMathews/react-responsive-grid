@@ -9,4 +9,5 @@ module.exports = React.createClass
       <li><Link to="three-column">Three-column layout</Link></li>
       <li><Link to="child-spans">Child spans</Link></li>
       <li><Link to="complex-responsive-layout">Complex responsive layout</Link></li>
+      <li><Link to="pre-post-squish">pre, post, squish</Link></li>
     </ul>
