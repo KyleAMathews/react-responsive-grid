@@ -41,6 +41,7 @@ routes = (
     <Route name="three-column" path="/examples/three-column" handler={require('./ThreeColumn')}/>
     <Route name="child-spans" path="/examples/child-spans" handler={require('./ChildSpans')}/>
     <Route name="complex-responsive-layout" path="/examples/complex-responsive-layout" handler={require('./ComplexResponsiveLayout')}/>
+    <Route name="pre-post-squish" path="/examples/pre-post-squish" handler={require('./PrePostSquish')}/>
   </Route>
 )
 
