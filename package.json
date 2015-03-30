@@ -20,6 +20,7 @@
     "gulp": "^3.8.11",
     "mocha": "^2.2.1",
     "mocha-unfunk-reporter": "^0.4.0",
+    "pre-commit": "^1.0.6",
     "react": "^0.13.1",
     "react-hot-loader": "^1.2.4",
     "react-router": "^0.13.2",
@@ -55,6 +56,7 @@
     "url": "https://github.com/KyleAMathews/react-responsive-grid.git"
   },
   "scripts": {
-    "test": "NODE_ENV=test node_modules/.bin/mocha -w --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter"
+    "test-watch": "NODE_ENV=test node_modules/.bin/mocha -w --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter",
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter"
   }
 }
