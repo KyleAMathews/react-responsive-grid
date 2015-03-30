@@ -31,7 +31,7 @@ module.exports = React.createClass
         <Span style={purpleStyle} columns=12 squish=4>Squish four</Span>
       </Grid>
       <h3>Pre</h3>
-      <code>{"<Span columns=12 pre=x>x is number of columns of white space to
+      <code>{"<Span columns=12 pre=x>where x is number of columns of white space to
         add to the beginning of the span.</Span>"}</code>
       <br />
       <br />
@@ -43,7 +43,7 @@ module.exports = React.createClass
         <Span style={purpleStyle} columns=12 pre=4>Pre four</Span>
       </Grid>
       <h3>Post</h3>
-      <code>{"<Span columns=12 pre=x>x is number of columns of white space to
+      <code>{"<Span columns=12 pre=x>where x is number of columns of white space to
         add at the end of the span.</Span>"}</code>
       <br />
       <br />
