@@ -8,11 +8,20 @@ WIP, porting best ideas from [Susy](http://susy.oddbird.net/) to a react-friendl
 - [x] Basic fluid container
 - [ ] static
 - [ ] non-centered layouts
+- [ ] container positions (left, center (default), right, length (left
+  and right))
 
 #### Breakpoint
 - [x] Basic component width breakpoints (note this is different than a
   media query breakpoint)
 - [ ] Media query breakpoints
+
+#### Columns
+- [x] set number of columns
+- [ ] list — create asymmetrical grids. List the size of each column
+  relative to other columns where 1 is a single column-unit. (1,2) would
+create a 2-column grid where the second column being twice the width of
+the first.
 
 #### Gutter options
 - [x] margin-based
@@ -37,9 +46,9 @@ WIP, porting best ideas from [Susy](http://susy.oddbird.net/) to a react-friendl
 - [x] "break" prop — start new row by clearing previous spans
 - [ ] No gutters option
 - [ ] "full" prop — shortcut for a span to fill its entire context
-- [ ] "pre" prop — add margin before a span
-- [ ] "post" prop — add margin after a span
-- [ ] "squish" prop — shortcut for adding pre and post margins to the
+- [x] "pre" prop — add margin before a span
+- [x] "post" prop — add margin after a span
+- [x] "squish" prop — shortcut for adding pre and post margins to the
   same span
 - [ ] "pull" prop — add negative margin before a span pulling it against
   the direction of flow

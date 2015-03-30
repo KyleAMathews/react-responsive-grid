@@ -4,6 +4,9 @@ module.exports = (options) ->
   defaults =
     columns: 3
     at: 0
+    pre: 0
+    post: 0
+    squish: 0
     contextColumns: 12
     gutterRatio: 1/4
     first: false
@@ -11,24 +14,39 @@ module.exports = (options) ->
 
   ops = objectAssign defaults, options
 
+  # Calculate the width of one column.
   n = 100/(ops.contextColumns + ((ops.contextColumns-1) * ops.gutterRatio))
+
+  # Calculate the width of a gutter.
   gutterWidth = ops.gutterRatio * n
 
-  calcColumnWidth = (numColumns) ->
+  # Function to calculate width of a span.
+  calcSpanWidth = (numColumns) ->
     n*numColumns + gutterWidth*(numColumns-1)
 
   # width
-  width = calcColumnWidth(ops.columns) + "%"
+  numColumns = ops.columns - ops.pre - ops.post - ops.squish*2
+  width = calcSpanWidth(numColumns) + "%"
 
   # marginLeft
-  if ops.at is 0
+  if ops.at is 0 and ops.pre is 0 and ops.squish is 0
     marginLeft = 0
   else
-    marginLeft = (calcColumnWidth(ops.at) + gutterWidth) + "%"
+    marginLeft = (
+      calcSpanWidth(
+        ops.at + ops.pre + ops.squish
+      ) + gutterWidth
+    ) + "%"
 
   # marginRight
-  if ops.last
+  if ops.last and ops.post is 0 and ops.squish is 0
     marginRight = 0
+  else if ops.post isnt 0 or ops.squish isnt 0
+    marginRight = (
+      calcSpanWidth(
+        ops.at + ops.post + ops.squish
+      ) + gutterWidth
+    ) + "%"
   else
     marginRight = gutterWidth + "%"
 
