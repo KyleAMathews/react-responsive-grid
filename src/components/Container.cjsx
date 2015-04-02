@@ -12,7 +12,7 @@ module.exports = React.createClass
 
     styles = objectAssign defaultStyles, @props.style
 
-    <div style={styles}>
+    <div {...@props} style={styles}>
       {@props.children}
       <span style={{display: 'block', clear: 'both'}}>{' '}</span>
     </div>
