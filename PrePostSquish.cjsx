@@ -19,7 +19,7 @@ module.exports = React.createClass
         <a href="https://github.com/KyleAMathews/react-responsive-grid/blob/master/examples/PrePostSquish.cjsx">Code</a>
       </p>
       <h3>Squish</h3>
-      <code>{"<Span columns=12 squish=x>x is number of columns to 'squish' the span
+      <code>{"<Span columns=12 squish=x>where x is number of columns to 'squish' the span
       from both sides.</Span>"}</code>
       <br />
       <br />
@@ -43,7 +43,7 @@ module.exports = React.createClass
         <Span style={purpleStyle} columns=12 pre=4>Pre four</Span>
       </Grid>
       <h3>Post</h3>
-      <code>{"<Span columns=12 pre=x>where x is number of columns of white space to
+      <code>{"<Span columns=12 post=x>where x is number of columns of white space to
         add at the end of the span.</Span>"}</code>
       <br />
       <br />
