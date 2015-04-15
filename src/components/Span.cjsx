@@ -53,7 +53,7 @@ module.exports = React.createClass
 
     style = objectAssign style, @props.style
 
-    <div style={style}>
+    <div {...@props} style={style}>
       {@renderChildren()}
       <span style={{display: 'block', clear: 'both'}}>{' '}</span>
     </div>

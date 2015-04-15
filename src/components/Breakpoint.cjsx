@@ -29,7 +29,7 @@ module.exports = React.createClass
   render: ->
     if @state.componentWidth
       if @props.minWidth <= @state.componentWidth < @props.maxWidth
-        <div>{@renderChildren()}</div>
+        <div {...@props}>{@renderChildren()}</div>
       else
         return <div />
     else

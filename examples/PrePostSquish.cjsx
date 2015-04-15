@@ -6,7 +6,7 @@ purpleStyle =
   border: '2px solid purple'
   color: 'purple'
   height: '10rem'
-  fontSize: '2rem'
+  fontSize: '1rem'
   lineHeight: '10rem'
   marginBottom: '1rem'
   textAlign: 'center'
@@ -19,40 +19,41 @@ module.exports = React.createClass
         <a href="https://github.com/KyleAMathews/react-responsive-grid/blob/master/examples/PrePostSquish.cjsx">Code</a>
       </p>
       <h3>Squish</h3>
-      <code>{"<Span columns=12 squish=x>where x is number of columns to 'squish' the span
-      from both sides.</Span>"}</code>
-      <br />
-      <br />
       <Grid columns=12>
-        <Span style={purpleStyle} columns=12>12 column span with no squish</Span>
-        <Span style={purpleStyle} columns=12 squish=1>Squish one</Span>
-        <Span style={purpleStyle} columns=12 squish=2>Squish two</Span>
-        <Span style={purpleStyle} columns=12 squish=3>Squish three</Span>
-        <Span style={purpleStyle} columns=12 squish=4>Squish four</Span>
+        <Span style={purpleStyle} columns=12>{"<Span columns=12>"}</Span>
+        <Span style={purpleStyle} columns=10 squish=1>{"<Span columns=10 squish=1>"}</Span>
+        <Span style={purpleStyle} columns=8 squish=2>{"<Span columns=8 squish=2>"}</Span>
+        <Span style={purpleStyle} columns=6 squish=3>{"<Span columns=6 squish=3>"}</Span>
+        <Span style={purpleStyle} columns=4 squish=4>{"<Span columns=4 squish=4>"}</Span>
       </Grid>
       <h3>Pre</h3>
-      <code>{"<Span columns=12 pre=x>where x is number of columns of white space to
-        add to the beginning of the span.</Span>"}</code>
-      <br />
-      <br />
       <Grid columns=12>
-        <Span style={purpleStyle} columns=12>12 column span with no pre</Span>
-        <Span style={purpleStyle} columns=12 pre=1>Pre one</Span>
-        <Span style={purpleStyle} columns=12 pre=2>Pre two</Span>
-        <Span style={purpleStyle} columns=12 pre=3>Pre three</Span>
-        <Span style={purpleStyle} columns=12 pre=4>Pre four</Span>
+        <Span style={purpleStyle} columns=12>{"<Span columns=12>"}</Span>
+        <Span style={purpleStyle} columns=11 pre=1>{"<Span columns=11 pre=1>"}</Span>
+        <Span style={purpleStyle} columns=10 pre=2>{"<Span columns=10 pre=2>"}</Span>
+        <Span style={purpleStyle} columns=9 pre=3>{"<Span columns=9 pre=3>"}</Span>
+        <Span style={purpleStyle} columns=8 pre=4>{"<Span columns=8 pre=4>"}</Span>
       </Grid>
       <h3>Post</h3>
-      <code>{"<Span columns=12 post=x>where x is number of columns of white space to
-        add at the end of the span.</Span>"}</code>
-      <br />
-      <br />
       <Grid columns=12>
-        <Span style={purpleStyle} columns=12>12 column span with no post</Span>
-        <Span style={purpleStyle} columns=12 post=1>post one</Span>
-        <Span style={purpleStyle} columns=12 post=2>post two</Span>
-        <Span style={purpleStyle} columns=12 post=3>post three</Span>
-        <Span style={purpleStyle} columns=12 post=4>post four</Span>
+        <Span style={purpleStyle} columns=12>{"<Span columns=12>"}</Span>
+        <Span style={purpleStyle} columns=11 post=1>{"<Span columns=11 post=1>"}</Span>
+        <Span style={purpleStyle} columns=10 post=2>{"<Span columns=10 post=2>"}</Span>
+        <Span style={purpleStyle} columns=9 post=3>{"<Span columns=9 post=3>"}</Span>
+        <Span style={purpleStyle} columns=8 post=4>{"<Span columns=8 post=4>"}</Span>
+      </Grid>
+      <h3>Using them together</h3>
+      <Grid columns=12>
+        <Span style={purpleStyle} columns=4>{"<Span columns=4>"}</Span>
+        <Span style={purpleStyle} columns=7 pre=1 last>{"<Span columns=7 pre=1 last>"}</Span>
+        <Span style={purpleStyle} columns=4 post=1>{"<Span columns=4 post=1>"}</Span>
+        <Span style={purpleStyle} columns=5 squish=1 last>{"<Span columns=5 squish=1"}</Span>
+        <Span style={purpleStyle} columns=6 pre=4>{"<Span columns=6 pre=4"}</Span>
+        <Span style={purpleStyle} columns=3 pre=1>{"<Span columns=3 pre=1"}</Span>
+        <Span style={purpleStyle} columns=4 pre=1>{"<Span columns=4 pre=1"}</Span>
+        <Span style={purpleStyle} columns=3 post=1>{"<Span columns=3 post=1>"}</Span>
+        <Span style={purpleStyle} columns=3 post=1>{"<Span columns=3 post=1>"}</Span>
+        <Span style={purpleStyle} columns=4 last>{"<Span columns=4>"}</Span>
       </Grid>
     </div>
 

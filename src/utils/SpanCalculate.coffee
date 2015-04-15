@@ -24,37 +24,48 @@ module.exports = (options) ->
   calcSpanWidth = (numColumns) ->
     n*numColumns + gutterWidth*(numColumns-1)
 
+  calcSpacing = (numColumns) ->
+    if numColumns is 0
+      return 0
+    else
+      calcSpanWidth(numColumns) + gutterWidth
+
   # width
-  numColumns = ops.columns - ops.pre - ops.post - ops.squish*2
-  width = calcSpanWidth(numColumns) + "%"
+  width = calcSpanWidth(ops.columns)
 
   # marginLeft
   if ops.at is 0 and ops.pre is 0 and ops.squish is 0
     marginLeft = 0
   else
-    marginLeft = (
-      calcSpanWidth(
-        ops.at + ops.pre + ops.squish
-      ) + gutterWidth
-    ) + "%"
+    marginLeft =
+      calcSpacing(ops.at) +
+      calcSpacing(ops.pre) +
+      calcSpacing(ops.squish)
 
   # marginRight
   if ops.last and ops.post is 0 and ops.squish is 0
     marginRight = 0
   else if ops.post isnt 0 or ops.squish isnt 0
-    marginRight = (
-      calcSpanWidth(
-        ops.at + ops.post + ops.squish
-      ) + gutterWidth
-    ) + "%"
+    marginRight =
+      calcSpacing(ops.post) +
+      calcSpacing(ops.squish)
+
+    unless ops.last
+      marginRight = marginRight + gutterWidth
+
   else
-    marginRight = gutterWidth + "%"
+    marginRight = gutterWidth
 
   # float
   if ops.last
     float = "right"
   else
     float = "left"
+
+  # Add %
+  width = width + "%"
+  marginLeft = marginLeft + "%"
+  marginRight = marginRight + "%"
 
   return {
     float: float
