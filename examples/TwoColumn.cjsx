@@ -10,7 +10,7 @@ module.exports = React.createClass
         <a href="https://github.com/KyleAMathews/react-responsive-grid/blob/master/examples/TwoColumn.cjsx">Code</a>
       </p>
       <Grid columns=12>
-        <Breakpoint minWidth=700>
+        <Breakpoint minWidth=700 widthMethod="componentWidth">
           <Span columns=9>
             <div style={{
               background: 'lightgray'
@@ -26,7 +26,7 @@ module.exports = React.createClass
             }}>Right column</div>
           </Span>
         </Breakpoint>
-        <Breakpoint maxWidth=700>
+        <Breakpoint maxWidth=700 widthMethod="componentWidth">
           <div style={{
             background: 'pink'
             height: '25vh'

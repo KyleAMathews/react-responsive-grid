@@ -20,7 +20,7 @@ module.exports = React.createClass
         <a href="https://github.com/KyleAMathews/react-responsive-grid/blob/master/examples/ComplexResponsiveLayout.cjsx">Code</a>
       </p>
       <Grid columns=12>
-        <Breakpoint minWidth=700>
+        <Breakpoint minWidth=700 widthMethod="componentWidth">
           <Span columns=8>
             <div style={purpleStyle}>1</div>
           </Span>
@@ -56,7 +56,7 @@ module.exports = React.createClass
           </Span>
         </Breakpoint>
 
-        <Breakpoint maxWidth=700>
+        <Breakpoint maxWidth=700 widthMethod="componentWidth">
           <Span columns=12 last>
             <div style={purpleStyle}>1</div>
           </Span>
