@@ -1,4 +1,4 @@
-React = require 'react/addons'
+React = require 'react'
 
 module.exports = React.createClass
   displayName: "Grid"
@@ -16,7 +16,7 @@ module.exports = React.createClass
   renderChildren: ->
     React.Children.map(@props.children, (child) =>
       if child.type?.displayName in ["Breakpoint", "Span"]
-        React.addons.cloneWithProps(child, {
+        React.cloneElement(child, {
           context:
             columns: @props.columns
             gutterRatio: @props.gutterRatio
