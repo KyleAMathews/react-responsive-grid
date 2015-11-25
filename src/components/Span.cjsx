@@ -7,7 +7,7 @@ module.exports = React.createClass
   displayName: "Span"
 
   propTypes:
-    context: React.PropTypes.object.isRequired
+    context: React.PropTypes.object
     columns: React.PropTypes.number
     at: React.PropTypes.number
     pre: React.PropTypes.number

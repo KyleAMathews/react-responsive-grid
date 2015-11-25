@@ -1,4 +1,5 @@
 React = require 'react'
+ReactDOM = require 'react-dom'
 Router = require 'react-router'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
 {Route, Navigation, DefaultRoute, RouteHandler, Link} = Router
@@ -46,5 +47,5 @@ routes = (
 )
 
 Router.run(routes, (Handler, state) ->
-  React.render(<Handler {...state}/>, document.getElementById("mount-point"))
+  ReactDOM.render(<Handler {...state}/>, document.getElementById("mount-point"))
 )

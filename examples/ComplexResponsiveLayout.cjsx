@@ -1,5 +1,4 @@
 React = require 'react'
-faker = require 'faker'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
 
 purpleStyle =
