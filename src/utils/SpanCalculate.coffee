@@ -62,6 +62,9 @@ module.exports = (options) ->
   else
     float = "left"
 
+  if ops.push
+    marginLeft = calcSpanWidth(ops.push) + gutterWidth
+
   # Add %
   width = width + "%"
   marginLeft = marginLeft + "%"
