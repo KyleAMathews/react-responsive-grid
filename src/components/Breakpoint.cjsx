@@ -19,7 +19,7 @@ ComponentWidthComponent = React.createClass
 
   renderChildren: ->
     React.Children.map(@props.children, (child) =>
-      if child.type?.displayName is "Span"
+      if child?.type?.displayName is "Span"
         React.cloneElement(child, {
           context: @props.context
         })
