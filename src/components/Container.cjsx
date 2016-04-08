@@ -1,5 +1,5 @@
 React = require 'react'
-objectAssign = require('react/lib/Object.assign')
+objectAssign = require('object-assign')
 
 module.exports = React.createClass
   displayName: "Container"

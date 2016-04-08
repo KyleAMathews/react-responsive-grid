@@ -1,4 +1,4 @@
-objectAssign = require('react/lib/Object.assign')
+objectAssign = require('object-assign')
 
 module.exports = (options) ->
   defaults =
