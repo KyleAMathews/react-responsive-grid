@@ -1,8 +1,7 @@
 React = require 'react'
-ReactDOM = require 'react-dom'
-Router = require 'react-router'
+{render} = require 'react-dom'
+{browserHistory, Router, Route, IndexRoute}  = require 'react-router'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
-{Route, Navigation, DefaultRoute, RouteHandler, Link} = Router
 
 Typography = require 'typography'
 typography = Typography()
@@ -31,21 +30,19 @@ App = React.createClass
         padding: rhythm(1)
         paddingLeft: "calc(280px + #{rhythm(1.5)})"
       }}>
-        <RouteHandler/>
+        {@props.children}
       </Container>
     </div>
 
 routes = (
-  <Route handler={App}>
-    <DefaultRoute name="intro" handler={Intro}/>
-    <Route name="two-column" path="/examples/two-column" handler={require('./TwoColumn')}/>
-    <Route name="three-column" path="/examples/three-column" handler={require('./ThreeColumn')}/>
-    <Route name="child-spans" path="/examples/child-spans" handler={require('./ChildSpans')}/>
-    <Route name="complex-responsive-layout" path="/examples/complex-responsive-layout" handler={require('./ComplexResponsiveLayout')}/>
-    <Route name="pre-post-squish" path="/examples/pre-post-squish" handler={require('./PrePostSquish')}/>
+  <Route path="/" component={App}>
+    <IndexRoute component={Intro} />
+    <Route path="/examples/two-column/" component={require('./TwoColumn')}/>
+    <Route path="/examples/three-column/" component={require('./ThreeColumn')}/>
+    <Route path="/examples/child-spans/" component={require('./ChildSpans')}/>
+    <Route path="/examples/complex-responsive-layout/" component={require('./ComplexResponsiveLayout')}/>
+    <Route path="/examples/pre-post-squish/" component={require('./PrePostSquish')}/>
   </Route>
 )
 
-Router.run(routes, (Handler, state) ->
-  ReactDOM.render(<Handler {...state}/>, document.getElementById("mount-point"))
-)
+render(<Router history={browserHistory} routes={routes}/>, document.getElementById("mount-point"))
