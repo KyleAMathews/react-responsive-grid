@@ -29,3 +29,5 @@ node_modules
 susy-test/
 examples/bundle.js
 dist/
+
+typings
