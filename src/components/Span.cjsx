@@ -53,7 +53,19 @@ module.exports = React.createClass
 
     style = objectAssign style, @props.style
 
-    <div {...@props} style={style}>
+    props = objectAssign {}, @props, {"style": style}
+    delete props.at
+    delete props.break
+    delete props.columns
+    delete props.context
+    delete props.first
+    delete props.last
+    delete props.post
+    delete props.pre
+    delete props.squish
+    delete props.style
+
+    <div {...props} style={style}>
       {@renderChildren()}
       <span style={{display: 'block', clear: 'both'}}>{' '}</span>
     </div>
