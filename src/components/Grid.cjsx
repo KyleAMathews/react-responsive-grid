@@ -1,4 +1,5 @@
 React = require 'react'
+objectAssign = require('object-assign')
 
 module.exports = React.createClass
   displayName: "Grid"
@@ -26,7 +27,11 @@ module.exports = React.createClass
     )
 
   render: ->
-    <div {...@props}>
+    props = objectAssign {}, @props
+    delete props.gutterRatio
+    delete props.columns
+
+    <div {...props}>
       {@renderChildren()}
       <span style={{display: 'block', clear: 'both'}}>{' '}</span>
     </div>

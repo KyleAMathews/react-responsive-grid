@@ -1,6 +1,7 @@
 React = require 'react'
 componentWidthMixin = require 'react-component-width-mixin'
 PageWidthMixin = require 'react-page-width'
+objectAssign = require 'object-assign'
 
 ComponentWidthComponent = React.createClass
   displayName: "Breakpoint"
@@ -28,9 +29,14 @@ ComponentWidthComponent = React.createClass
     )
 
   render: ->
+    props = objectAssign {}, @props
+    delete props.maxWidth
+    delete props.minWidth
+    delete props.widthMethod
+
     if @state.componentWidth
       if @props.minWidth <= @state.componentWidth < @props.maxWidth
-        <div {...@props}>{@renderChildren()}</div>
+        <div {...props}>{@renderChildren()}</div>
       else
         return <div />
     else
@@ -62,9 +68,14 @@ PageWidthComponent = React.createClass
     )
 
   render: ->
+    props = objectAssign {}, @props
+    delete props.maxWidth
+    delete props.minWidth
+    delete props.widthMethod
+
     if @state.pageWidth
       if @props.minWidth <= @state.pageWidth < @props.maxWidth
-        <div {...@props}>{@renderChildren()}</div>
+        <div {...props}>{@renderChildren()}</div>
       else
         return <div />
     else

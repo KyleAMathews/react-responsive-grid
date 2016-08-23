@@ -11,8 +11,13 @@ module.exports = React.createClass
       marginRight: 'auto'
 
     styles = objectAssign defaultStyles, @props.style
+    children = @props.children
 
-    <div {...@props} style={styles}>
-      {@props.children}
+    props = objectAssign {}, @props
+    delete props.children
+    delete props.style
+
+    <div {...props} style={styles}>
+      {children}
       <span style={{display: 'block', clear: 'both'}}>{' '}</span>
     </div>
