@@ -46,7 +46,7 @@ module.exports = React.createClass
         <Span style={purpleStyle} columns=4>{"<Span columns=4>"}</Span>
         <Span style={purpleStyle} columns=7 pre=1 last>{"<Span columns=7 pre=1 last>"}</Span>
         <Span style={purpleStyle} columns=4 post=1>{"<Span columns=4 post=1>"}</Span>
-        <Span style={purpleStyle} columns=5 squish=1 last>{"<Span columns=5 squish=1>"}</Span>
+        <Span style={purpleStyle} columns=5 squish=1 last>{"<Span columns=5 squish=1 last>"}</Span>
         <Span style={purpleStyle} columns=6 pre=4>{"<Span columns=6 pre=4>"}</Span>
         <Span style={purpleStyle} columns=3 pre=1>{"<Span columns=3 pre=1>"}</Span>
         <Span style={purpleStyle} columns=4 pre=1>{"<Span columns=4 pre=1>"}</Span>
