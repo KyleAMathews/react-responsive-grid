@@ -1,6 +1,7 @@
 React = require 'react'
+createReactClass = require 'create-react-class'
 
-module.exports = React.createClass
+module.exports = createReactClass
   render: ->
     <div>
       <h1>React Responsive Grid</h1>

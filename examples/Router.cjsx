@@ -2,6 +2,7 @@ React = require 'react'
 {render} = require 'react-dom'
 {browserHistory, Router, Route, IndexRoute}  = require 'react-router'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
+createReactClass = require 'create-react-class'
 
 Typography = require 'typography'
 typography = Typography()
@@ -11,7 +12,7 @@ injectStyles()
 Controls = require './Controls'
 Intro = require './Intro'
 
-App = React.createClass
+App = createReactClass
   render: ->
     <div>
       <div style={{

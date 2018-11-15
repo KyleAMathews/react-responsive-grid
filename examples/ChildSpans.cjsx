@@ -1,7 +1,8 @@
 React = require 'react'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
+createReactClass = require 'create-react-class'
 
-module.exports = React.createClass
+module.exports = createReactClass
   render: ->
     <div>
       <h2>Child spans</h2>

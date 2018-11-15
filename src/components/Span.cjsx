@@ -1,9 +1,10 @@
 React = require 'react'
 objectAssign = require('object-assign')
+createReactClass = require 'create-react-class'
 
 spanCalculate = require '../utils/SpanCalculate'
 
-module.exports = React.createClass
+module.exports = createReactClass
   displayName: "Span"
 
   propTypes:

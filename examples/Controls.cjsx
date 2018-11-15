@@ -1,7 +1,8 @@
 React = require 'react'
 {Link} = require 'react-router'
+createReactClass = require 'create-react-class'
 
-module.exports = React.createClass
+module.exports = createReactClass
   render: ->
     <ul>
       <li><Link to="/">Introduction</Link></li>
