@@ -2,15 +2,17 @@ React = require 'react'
 componentWidthMixin = require 'react-component-width-mixin'
 PageWidthMixin = require 'react-page-width'
 objectAssign = require 'object-assign'
+createReactClass = require 'create-react-class'
+PropTypes = require 'prop-types'
 
-ComponentWidthComponent = React.createClass
+ComponentWidthComponent = createReactClass
   displayName: "Breakpoint"
 
   mixins: [componentWidthMixin]
 
   propTypes:
-    minWidth: React.PropTypes.number
-    maxWidth: React.PropTypes.number
+    minWidth: PropTypes.number
+    maxWidth: PropTypes.number
 
   getDefaultProps: ->
     {
@@ -42,14 +44,14 @@ ComponentWidthComponent = React.createClass
     else
       return <div />
 
-PageWidthComponent = React.createClass
+PageWidthComponent = createReactClass
   displayName: "Breakpoint"
 
   mixins: [PageWidthMixin]
 
   propTypes:
-    minWidth: React.PropTypes.number
-    maxWidth: React.PropTypes.number
+    minWidth: PropTypes.number
+    maxWidth: PropTypes.number
 
   getDefaultProps: ->
     {
@@ -81,13 +83,13 @@ PageWidthComponent = React.createClass
     else
       return <div />
 
-module.exports = React.createClass
+module.exports = createReactClass
   displayName: 'Breakpoint'
 
   propTypes:
-    widthMethod: React.PropTypes.string.isRequired
-    minWidth: React.PropTypes.number
-    maxWidth: React.PropTypes.number
+    widthMethod: PropTypes.string.isRequired
+    minWidth: PropTypes.number
+    maxWidth: PropTypes.number
 
   getDefaultProps: ->
     widthMethod: 'pageWidth'

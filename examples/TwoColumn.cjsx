@@ -1,8 +1,9 @@
 React = require 'react'
 faker = require 'faker'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
+createReactClass = require 'create-react-class'
 
-module.exports = React.createClass
+module.exports = createReactClass
   render: ->
     <div>
       <h2>Responsive two column layout</h2>

@@ -1,5 +1,6 @@
 React = require 'react'
 {Container, Grid, Breakpoint, Span} = require '../src/index'
+createReactClass = require 'create-react-class'
 
 purpleStyle =
   border: '2px solid purple'
@@ -10,7 +11,7 @@ purpleStyle =
   marginBottom: '1rem'
   textAlign: 'center'
 
-module.exports = React.createClass
+module.exports = createReactClass
   render: ->
     <div>
       <h2>Demo squish, post, pre</h2>

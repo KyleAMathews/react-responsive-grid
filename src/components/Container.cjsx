@@ -1,7 +1,8 @@
 React = require 'react'
 objectAssign = require('object-assign')
+createReactClass = require 'create-react-class'
 
-module.exports = React.createClass
+module.exports = createReactClass
   displayName: "Container"
 
   render: ->

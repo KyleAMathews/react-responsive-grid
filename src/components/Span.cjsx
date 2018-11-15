@@ -1,20 +1,22 @@
 React = require 'react'
 objectAssign = require('object-assign')
+createReactClass = require 'create-react-class'
+PropTypes = require 'prop-types'
 
 spanCalculate = require '../utils/SpanCalculate'
 
-module.exports = React.createClass
+module.exports = createReactClass
   displayName: "Span"
 
   propTypes:
-    context: React.PropTypes.object
-    columns: React.PropTypes.number
-    at: React.PropTypes.number
-    pre: React.PropTypes.number
-    post: React.PropTypes.number
-    squish: React.PropTypes.number
-    last: React.PropTypes.bool
-    break: React.PropTypes.bool
+    context: PropTypes.object
+    columns: PropTypes.number
+    at: PropTypes.number
+    pre: PropTypes.number
+    post: PropTypes.number
+    squish: PropTypes.number
+    last: PropTypes.bool
+    break: PropTypes.bool
 
   getDefaultProps: ->
     at: 0
