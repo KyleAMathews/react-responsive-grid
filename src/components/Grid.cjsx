@@ -1,13 +1,14 @@
 React = require 'react'
 objectAssign = require('object-assign')
 createReactClass = require 'create-react-class'
+PropTypes = require 'prop-types'
 
 module.exports = createReactClass
   displayName: "Grid"
 
   propTypes:
-    columns: React.PropTypes.number
-    gutterRatio: React.PropTypes.number
+    columns: PropTypes.number
+    gutterRatio: PropTypes.number
 
   getDefaultProps: ->
     {
