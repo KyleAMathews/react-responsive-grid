@@ -7,6 +7,7 @@
     "url": "https://github.com/KyleAMathews/react-responsive-grid/issues"
   },
   "dependencies": {
+    "create-react-class": "^15.6.3",
     "object-assign": "^4.0.1",
     "react-component-width-mixin": "^2.0.0",
     "react-page-width": "^1.0.1"
